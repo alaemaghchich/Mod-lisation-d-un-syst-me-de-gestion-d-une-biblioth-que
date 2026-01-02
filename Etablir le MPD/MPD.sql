@@ -1,3 +1,6 @@
+CREATE DATABASE bibliotheque;
+USE bibliotheque;
+
 CREATE TABLE rayon (
     id_rayon INT AUTO_INCREMENT PRIMARY KEY,
     nom_rayon VARCHAR(100) NOT NULL

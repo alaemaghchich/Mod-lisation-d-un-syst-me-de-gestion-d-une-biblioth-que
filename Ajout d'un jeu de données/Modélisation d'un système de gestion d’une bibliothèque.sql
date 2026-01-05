@@ -10,6 +10,8 @@ INSERT INTO rayon (nom_rayon, localisation) VALUES
 ('Informatique', 'Étage 1 - Salle A - Rayon A3'),
 ('Mathématiques', 'Étage 1 - Salle B - Rayon B1'),
 ('Philosophie', 'Étage 2 - Salle C - Rayon C2');
+SELECT * FROM rayon;
+
 
 CREATE TABLE ouvrage (
     id_ouvrage INT AUTO_INCREMENT PRIMARY KEY,
@@ -22,6 +24,8 @@ INSERT INTO ouvrage (titre, date_pub, id_rayon) VALUES
 ('Introduction à SQL', '2020-05-10', 1),
 ('Algèbre Linéaire', '2018-09-01', 2),
 ('Critique de la raison pure', '1781-01-01', 3);
+SELECT * FROM ouvrage;
+
 
 CREATE TABLE auteur (
     id_auteur INT AUTO_INCREMENT PRIMARY KEY,
@@ -32,6 +36,8 @@ INSERT INTO auteur (nom, prenom) VALUES
 ('alae', 'maghchich'),
 ('monir', 'batal'),
 ('brahim', 'first batal');
+SELECT * FROM auteur;
+
 
 CREATE TABLE ouvrage_auteur (
     id_ouvrage INT NOT NULL,
@@ -44,6 +50,8 @@ INSERT INTO ouvrage_auteur (id_ouvrage, id_auteur) VALUES
 (1, 1),
 (2, 2),
 (3, 3);
+SELECT * FROM ouvrage_auteur;
+
 
 CREATE TABLE lecteur (
     id_lecteur INT AUTO_INCREMENT PRIMARY KEY,
@@ -57,6 +65,8 @@ INSERT INTO lecteur (nom, prenom, email, tele, cin) VALUES
 ('maghchich', 'alae', 'alaemaghchich@gmail.com', '0612345678', 'AB000001'),
 ('maimouni', 'mounir', 'mounirmaimouni@gmail.com', '069876543', 'BC000002'),
 ('medkour', 'brahim', 'brahimmedkour@gmail.com', '0623456789', 'CD000003');
+SELECT * FROM lecteur;
+
 
 CREATE TABLE emprunts (
     id_emprunts INT AUTO_INCREMENT PRIMARY KEY,
@@ -72,6 +82,8 @@ INSERT INTO emprunts (date_de_emprunts, date_de_retour_prevue, date_de_rendu_ree
 ('2025-01-01', NULL, '2025-01-15', 1, 1),
 ('2025-01-03', '2025-01-17', '2025-01-16', 2, 2),
 ('2025-01-05', NULL, '2025-01-18', 3, 3);
+SELECT * FROM emprunts;
+
 
 CREATE TABLE personnel (
     id_personnel INT AUTO_INCREMENT PRIMARY KEY,
@@ -86,3 +98,4 @@ INSERT INTO personnel (nom, prenom, email, mot_de_pass, id_supervisor) VALUES
 ('Alae', 'maghchich', 'maghchich@biblio.com', 'alae123', 1),
 ('Admin', 'Principal', 'admin@biblio.com', 'admin123', NULL),
 ('brahim', 'hero', 'batal@biblio.com', 'brahim123', 2)
+SELECT * FROM personnel;
